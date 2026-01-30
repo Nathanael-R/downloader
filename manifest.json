@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Rork Project Downloader",
+  "version": "1.0.0",
+  "description": "Intercept project JSON from rork.com and send to local server for downloading",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://rork.com/*",
+    "https://*.rork.com/*",
+    "http://localhost:3000/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://rork.com/*", "https://*.rork.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
