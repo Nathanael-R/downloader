@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+server/node_modules/
+
+# Downloaded projects
+projects/
+project_data.json
+
+# Legacy/unnecessary files
+extract_project.py
+app/
+components/
+contexts/
+assets/
+constants/
+types/
+mocks/
+eslint.config.js
+metro.config.js
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Environment variables
+.env
+.env.local
